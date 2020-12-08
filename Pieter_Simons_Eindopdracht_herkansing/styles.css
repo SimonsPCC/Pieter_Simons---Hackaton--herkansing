@@ -1,0 +1,175 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	background-color: rgb(223, 218, 255);
+	box-sizing: border-box;
+	font-size: 1em;
+}
+
+.banner {
+	background-image: url(pics/hen-2262102_60.png);
+	background-repeat: no-repeat;
+	height: 150px;
+	color: white;
+	background-color: darkslateblue;
+	padding: 30px 0px;
+	border-bottom: solid 10px black;
+	border-top: solid 10px black;
+	margin: 0;
+}
+
+h1 {
+	font-size: 1.5em;
+	text-align: right;
+	margin-right: 20px;
+}
+
+/* nav styling */
+nav {
+	margin-bottom: 10px;
+	background-color: #b096f8;
+}
+nav ul {
+	display: flex;
+	flex-direction: column;
+
+	text-align: center;
+	list-style-type: none;
+	padding-left: 0;
+}
+
+nav a {
+	display: block;
+	color: #000;
+	background-color: #9f7ef8;
+	padding: 8px 16px;
+	text-decoration: none;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+li a:hover {
+	background-color: #555;
+	color: white;
+}
+
+/* einde nav styling */
+
+/*main*/
+
+/* image autp */
+img {
+	max-width: 100%;
+	height: auto;
+}
+iframe {
+	max-width: 100%;
+
+	margin-bottom: 10px;
+}
+
+/* parent */
+.parent {
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(223, 218, 255);
+}
+
+.parent div {
+	padding: 10px 10px 100px 10px;
+	margin-bottom: 10px;
+	background-color: white;
+	text-decoration: none;
+}
+
+/* videobox*/
+
+.videobox {
+	padding: 10px 10px 20px 10px;
+	margin: 10px 0 10px 0;
+	text-align: center;
+	background-color: #ffffff;
+}
+
+.bottom {
+	height: 100px;
+	background-color: darkslateblue;
+	background-image: url(pics/hen-2262102_60.png);
+
+	background-repeat: no-repeat;
+	color: white;
+	text-align: right;
+}
+
+.bottom h5 {
+	padding: 10px;
+}
+
+aside {
+	margin-bottom: 30px;
+	padding: 10px 10px 10px 10px;
+	background-color: white;
+}
+
+aside div {
+	padding: 10px;
+}
+
+aside li {
+	list-style: none;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (min-width: 600px) {
+	* {
+		box-sizing: border-box;
+	}
+	.parent {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+		grid-column-gap: 10px;
+		grid-row-gap: 10px;
+	}
+	.div1 {
+		grid-area: 1 / 1 / 4 / 3;
+	}
+	.div2 {
+		grid-area: 4 / 1 / 7 / 3;
+	}
+	.div3 {
+		grid-area: 1 / 3 / 4 / 5;
+	}
+	.div4 {
+		grid-area: 4 / 3 / 7 / 5;
+	}
+	.parent div {
+		margin-bottom: 0;
+	}
+	nav ul {
+		display: flex;
+		flex-direction: row;
+		background-color: #a788fa;
+	}
+
+	nav a {
+		margin-bottom: 0;
+		margin-right: 5px;
+		padding: 8px 40px;
+	}
+
+	.wrapper {
+		max-width: 1000px;
+		margin: auto;
+		background-color: rgb(212, 212, 212);
+		box-sizing: border-box;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
